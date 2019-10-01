@@ -1,0 +1,49 @@
+\documentclass{article}
+
+%------------------------------------------------header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[R]{\thepage\ }
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%------------------------------------------------Forside
+\begin{document}
+\begin{titlepage}
+	\begin{center}
+%		\\
+%		[1cm]
+		\huge{\bfseries Andreas Fagerheim}	\\
+		[5cm]
+		\textsc{Universety of Oslo}\\
+		[1cm]
+		\textsc{Eigenvalue problems and Schrödinger equation}\\
+		[8cm]
+	\end{center}
+	\begin{flushright}
+	\textsc{Andreas Fagerheim \\
+	Student FYS 4150\\
+	September 3, 2019}
+	\end{flushright}
+\end{titlepage}
+%------------------------------------------------Abstract
+\pagenumbering{roman}
+\section*{Abstract}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addcontentsline{toc}{section}{\numberline{} Abstract}
+%\thispagestyle{empty}
+\cleardoublepage
+%------------------------------------------------Innholdsfortegnelse
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+%------------------------------------------------Artikkelstart
+\pagenumbering{arabic}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\setcounter{page}{1}
+\section{Theory}\label{sec:theory}
+
+\end{document}
+
