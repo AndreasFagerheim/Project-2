@@ -2,12 +2,19 @@
 #include <fstream>
 #include <armadillo>
 #include "functions.h"
+#include "test.h"
 
 using namespace std;
 using namespace arma;
 
+
 int main()
 {
+
+    //cout<<"hello"<<endl;
+    //cout<<"running test"<<endl;
+    //testing();
+
     int n = 3;
     int a = 3;
     int d = 2;
@@ -22,9 +29,8 @@ int main()
     R = jacobi_method(test,R,n);
     outfile << R;
 
-
     outfile.close();
-
-
+    cout<<"running test"<<endl;
+    /**/
     return 0;
 }

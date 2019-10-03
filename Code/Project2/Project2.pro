@@ -5,11 +5,13 @@ CONFIG -= qt
 
 SOURCES += \
         functions.cpp \
-        main.cpp
+        main.cpp \
+        test.cpp
 
 INCLUDEPATH += /usr/local/Cellar/armadillo/9.700.2/include/
 LIBS += -L/usr/local/Cellar/armadillo/9.700.2/lib/ -larmadillo
 
 HEADERS += \
-    functions.h
+    functions.h \
+    test.h
 
