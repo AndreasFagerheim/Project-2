@@ -11,10 +11,10 @@ using namespace arma;
 int main()
 {
 
-    //cout<<"hello"<<endl;
-    //cout<<"running test"<<endl;
-    //testing();
 
+    cout<<"running test"<<endl;
+    testing();
+    cout<<"Finnished test"<<endl;
     int n = 3;
     int a = 3;
     int d = 2;
@@ -26,11 +26,11 @@ int main()
     vec eigenvalues = analytic_eigenvalues(n,a,d);
     outfile << eigenvalues;
     mat R = mat(n,n,fill::eye);
-    R = jacobi_method(test,R,n);
+    //R = jacobi_method(test,R,n);
     outfile << R;
 
     outfile.close();
-    cout<<"running test"<<endl;
+    cout<<"Finnished"<<endl;
     /**/
     return 0;
 }

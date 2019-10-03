@@ -3,6 +3,7 @@
 #include <armadillo>
 #include "functions.h"
 #include "test.h"
+#include <cmath>
 
 
 using namespace std;
@@ -31,6 +32,27 @@ int testing(){
         cout<<"Success! Max value = expected max value"<<endl;
     }else{
         cout<<"ERROR!!! (Not the right max value)"<<endl;
+    }
+
+
+    // testing eignevalues of implemeted algorithm vs analytic vs armadillo
+    int a = 2;
+    int d = 3;
+    mat testMatrix = tridiagonal(n, a,d);
+    // eigenvalues using armadillo
+    vec eig_armadillo = sort(eig_sym(testMatrix));
+    // eigenvalues grom analytic solution
+    vec eig_analytic = sort(analytic_eigenvalues(n,a,d));
+    // eigenvalues from jacobis method
+    vec eig_jacobi = 0;
+
+    // analytic vs armadillo method
+    for(int i = 0;i<n; i++){
+        if(fabs(eig_analytic[i]-eig_armadillo[i]) < eps){
+            cout<<"Sucsess!! Analytic eigenvalues equal to armadillos";
+        }else{
+            cout<<"ERROR!! Differnet eigenvalues for analytic and armadillos method";
+        }
     }
 
     return 0;
